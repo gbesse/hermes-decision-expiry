@@ -21,7 +21,7 @@ def run(data):
    else:
     actual=source['value'];expected=req['expected']
     if op in ['lte','gte']:number(actual);number(expected)
-    good=actual==expected if op=='eq'else actual<=expected if op=='lte'else actual>=expected;state='met'if good else'failed'
+    good=(type(actual)is type(expected)and actual==expected)if op=='eq'else actual<=expected if op=='lte'else actual>=expected;state='met'if good else'failed'
    results.append({'evidence':key,'state':state,'reason':reason})
   state='invalidated'if any(r['state']=='failed'for r in results)else'unconfirmed'if any(r['state']=='unknown'for r in results)else'conditions_currently_met'
   output.append({'id':d['id'],'state':state,'conditions':results})

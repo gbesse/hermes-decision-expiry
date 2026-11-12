@@ -8,3 +8,6 @@ class DomainTests(unittest.TestCase):
   x=run(dict(DEMO,now='2026-11-13T12:00:00Z'));self.assertEqual(x['decisions'][0]['state'],'unconfirmed');self.assertEqual(x['decisions'][0]['conditions'][0]['reason'],'expired_evidence')
  def test_missing_evidence_is_unknown(self):
   x=run(dict(DEMO,evidence=[]));self.assertEqual(x['decisions'][0]['state'],'unconfirmed');self.assertFalse(x['notifications_sent'])
+
+ def test_bool_not_equal_to_integer(self):
+  x=copy.deepcopy(DEMO);x['evidence'][0]['value']=1;x['decisions'][0]['requirements'][0].update(operator='eq',expected=True);self.assertEqual(run(x)['decisions'][0]['state'],'invalidated')
