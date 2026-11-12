@@ -1,0 +1,6 @@
+name: hermes-decision-expiry
+version: 0.1.0-alpha.1
+manifest_version: 2
+api_version: 1
+license: MIT
+description: "FR : Revoir les décisions quand preuves et conditions expirent / EN: Review decisions when evidence and conditions expire / ES: Revisar decisiones al caducar pruebas y condiciones"

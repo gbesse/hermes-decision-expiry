@@ -1,0 +1,23 @@
+{
+  "now": "2026-11-12T12:00:00Z",
+  "evidence": [
+    {
+      "id": "delivery-days",
+      "value": 30,
+      "observed_at": "2026-11-11T12:00:00Z",
+      "expires_at": "2026-11-13T12:00:00Z"
+    }
+  ],
+  "decisions": [
+    {
+      "id": "supplier-A",
+      "requirements": [
+        {
+          "evidence": "delivery-days",
+          "operator": "lte",
+          "expected": 20
+        }
+      ]
+    }
+  ]
+}

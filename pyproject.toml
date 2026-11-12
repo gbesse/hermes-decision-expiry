@@ -1,0 +1,16 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "hermes-decision-expiry"
+version = "0.1.0a1"
+description = "FR: Revoir les décisions quand preuves et conditions expirent | EN: Review decisions when evidence and conditions expire | ES: Revisar decisiones al caducar pruebas y condiciones"
+requires-python = ">=3.11"
+license = "MIT"
+
+[project.scripts]
+hermes-decision-expiry = "hermes_decision_expiry.__main__:main"
+
+[tool.setuptools.packages.find]
+include = ["hermes_decision_expiry*"]

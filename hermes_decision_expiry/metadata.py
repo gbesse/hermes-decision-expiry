@@ -1,0 +1,1 @@
+DESCRIPTION = {'fr': 'Revoir les décisions quand preuves et conditions expirent', 'en': 'Review decisions when evidence and conditions expire', 'es': 'Revisar decisiones al caducar pruebas y condiciones'}
